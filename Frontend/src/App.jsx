@@ -8,6 +8,9 @@ import CareNeedsMain from './components/careNeeds/careNeedsMain.jsx';
 import PatientMain from './components/patientFeedback/patientMain.jsx';
 import HospitalLocation from './components/hospitalLocation/hospitalLocationMain.jsx';
 import { Hospital } from 'lucide-react';
+import AskQuestionMain from './components/AskQuestion/askquestionMain.jsx';
+import CallBackMain from './components/callBack/callBackMain.jsx';
+import Footer from './components/Fotteer/footerMain.jsx';
 function App() {
  
 
@@ -23,6 +26,9 @@ function App() {
         <CareNeedsMain/>
         <PatientMain/>
          <HospitalLocation/>
+        <AskQuestionMain/>
+        <CallBackMain/>
+        <Footer/>
       </div>
     </>
   )

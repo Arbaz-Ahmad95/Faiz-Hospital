@@ -1,5 +1,9 @@
 import React from 'react';
-import saif2 from '../../assets/saif2.jpeg';
+import emergencyCare from '../../assets/emergencyCare.png';
+import emergencyCare2 from '../../assets/emergencyCare2.png';
+import emergencyCare3 from '../../assets/emergencyCare3.png';
+import emergencyCare4 from '../../assets/emergencyCare4.png';
+import emergencyCare5 from '../../assets/emergencyCare5.png';
 import { ArrowUpRight } from 'lucide-react'; // optional icon lib (or use →)
 
 const FullSection = () => {
@@ -26,27 +30,32 @@ const FullSection = () => {
           {
             title: 'Emergency Care',
             desc: '24/7 urgent medical care',
+            image:emergencyCare,
           },
           {
             title: 'Orthopaedics & Spine Care',
             desc: 'Advanced bone, joint & spine care',
+            image:emergencyCare4,
           },
           {
             title: 'Obstetrics & Gynaecology',
             desc: 'Maternity & women’s health care',
+            image:emergencyCare2,
           },
           {
             title: 'General & Laparoscopic Surgery',
             desc: 'Expert surgical care solutions',
+            image:emergencyCare3,
           },
           {
             title: 'General Medicine',
             desc: 'Comprehensive medical care services',
+            image:emergencyCare5,
           },
         ].map((item, index) => (
           <div key={index} className="flex items-center justify-between border-b pb-4 hover:bg-gray-100">
             <div className="flex items-center gap-4">
-              <img src={saif2} alt="" className="w-60 h-24 object-cover rounded-lg" />
+              <img src={item.image} alt="" className="w-60 h-24 object-cover rounded-lg" />
               <div>
                 <h2 className="font-semibold text-2xl">{item.title}</h2>
                 <p className="text-lg text-gray-600">{item.desc}</p>
