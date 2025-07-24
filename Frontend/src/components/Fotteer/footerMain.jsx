@@ -55,7 +55,7 @@ const Footer = () => {
             <div>
               <p className="font-semibold">Faiz Hospital</p>
               <p>123 Main Rd, 1st Block, City Center, Bengaluru, Karnataka 560010</p>
-              <p className="flex items-center gap-2 mt-2"><FaPhoneAlt /> +91 98765 43210</p>
+              <p className="flex items-center gap-2 mt-2"><FaPhoneAlt /> +91 9525703538</p>
               <p className="flex items-center gap-2"><FaEnvelope /> info@faizhospital.in</p>
             </div>
            

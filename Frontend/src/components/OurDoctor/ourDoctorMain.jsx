@@ -1,5 +1,6 @@
 import React from "react";
 import saif2 from "../../assets/saif2.jpeg";
+import { Link } from 'react-router-dom';
 
 const OurDoctorMain = () => {
   const doctors = [
@@ -49,8 +50,8 @@ const OurDoctorMain = () => {
       {/* Filter Buttons */}
       <div className="flex justify-center gap-4 mb-10 flex-wrap">
         <button className="bg-blue-900 text-white px-4 py-2 rounded-lg">All</button>
-        <button className="border border-gray-400 px-4 py-2 rounded-lg">Ananya Hospital</button>
-        <button className="border border-gray-400 px-4 py-2 rounded-lg">Shanbhag Hospital</button>
+        <button className="border border-gray-400 px-4 py-2 rounded-lg">Faiz Hospital</button>
+        
       </div>
 
       {/* Doctor Cards */}
@@ -73,9 +74,10 @@ const OurDoctorMain = () => {
 
 {/* Centered Book Button Below Cards */}
 <div className="flex justify-center mt-10">
-  <button className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-2 rounded-full flex items-center space-x-4">
-    <span>Find a Doctor</span>
+ <Link to="/finddoctor"><button className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-2 rounded-full flex items-center space-x-4">
+         <span>Find a Doctor</span>
   </button>
+  </Link> 
 </div>
 </div>
 

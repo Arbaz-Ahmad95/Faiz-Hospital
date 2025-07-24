@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Saif2 from "../../assets/saif1.jpeg";
 import hospitalLogo from '../../assets/hospitalLogo.png'; // Your logo image
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({scrollToBook}) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -19,17 +20,19 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-6 text-sm font-medium text-black">
-            <a href="/">About</a>
-            <a href="/">Shanbhag</a>
-            <a href="/">Specialities ⌄</a>
-            <a href="/">Find a Doctor</a>
-            <a href="/">Health Packages</a>
+           
+            <Link to="/about">About</Link>
+            <Link to="/specialties">Specialties ⌄</Link>
+            <Link to="/finddoctor">Find a Doctor</Link>
+             <Link to="/healthpackage">Health Packages</Link>
+           
             <a href="/">Resources ⌄</a>
           </div>
 
           {/* Desktop Button */}
           <div className="hidden lg:flex">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2 rounded-full flex items-center space-x-1">
+            <button onClick={scrollToBook}
+            className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2 rounded-full flex items-center space-x-1">
               <span>📅</span>
               <span>Book an Appointment</span>
             </button>
@@ -57,12 +60,12 @@ const Navbar = () => {
           </div>
 
           <nav className="flex flex-col space-y-4 text-black text-sm font-medium">
-            <a href="/">About</a>
-            <a href="/">Shanbhag</a>
-            <a href="/">Specialities</a>
-            <a href="/">Find a Doctor</a>
-            <a href="/">Health Packages</a>
-            <a href="/">Resources</a>
+            <Link to="/about">About</Link>
+            <Link to="/specialties">Specialties ⌄</Link>
+            <Link to="/finddoctor">Find a Doctor</Link>
+             <Link to="/healthpackage">Health Packages</Link>
+           
+            <a href="/">Resources ⌄</a>
           </nav>
         </div>
 
