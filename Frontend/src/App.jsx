@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import Home from './pages/home';
 import OurSpecialties from './pages/ourSpecialtiesinner'; // ✅ import your page
 import FindDoctor from './pages/findDoctor';
 import HealthPackages from './pages/healthPckage';
