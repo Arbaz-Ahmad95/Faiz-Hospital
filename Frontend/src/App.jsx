@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
-import OurSpecialties from './pages/OurSpecialtiesinner'; // ✅ import your page
+import OurSpecialties from './pages/OurSpecialtiesinner.jsx'; // ✅ import your page
 import FindDoctor from './pages/findDoctor';
 import HealthPackages from './pages/healthPckage';
 import AboutFaizHospital from './pages/aboutFaizHospital.jsx';
