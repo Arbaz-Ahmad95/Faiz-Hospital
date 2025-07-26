@@ -15,7 +15,7 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://faizcare.onrender.com//api/ai/ask', {
+      const response = await fetch('https://faizcare.onrender.com/api/ai/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question }),
@@ -28,11 +28,11 @@ const ChatBot = () => {
 
       const data = await response.json();
       setAnswer(data.answer);
-      setQuestion('');
-      setIsLoading(false);
     } catch (err) {
       setAnswer('⚠️ Error: ' + err.message);
+    } finally {
       setIsLoading(false);
+      setQuestion('');
     }
   };
 
