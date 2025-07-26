@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Saif2 from "../../assets/saif1.jpeg";
-import hospitalLogo from '../../assets/hospitalLogo.png'; // Your logo image
+import hospitalLogo from '../../assets/HospitalLogo.png'; // Your logo image
 import { Link } from 'react-router-dom';
 
 const Navbar = ({scrollToBook}) => {
