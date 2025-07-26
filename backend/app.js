@@ -5,15 +5,20 @@ const aiRoutes = require('./routes/aiRoutes');
 
 const app = express();
 
-// ✅ CORS setup
+// ✅ CORS setup (update this in production if needed)
 app.use(cors({
-  origin: 'http://localhost:5173', // React app URL
+  origin: 'http://localhost:5173', // 👉 Change this to your frontend URL on Vercel after deploy
   methods: ['GET', 'POST'],
   credentials: true
 }));
 
 // ✅ Body parser
 app.use(express.json());
+
+// ✅ Root route (to check server is live)
+app.get("/", (req, res) => {
+  res.send("🟢 Backend is live!");
+});
 
 // ✅ API Routes
 app.use('/api/ai', aiRoutes);
