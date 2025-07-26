@@ -5,9 +5,9 @@ const aiRoutes = require('./routes/aiRoutes');
 
 const app = express();
 
-// ✅ CORS setup (update this in production if needed)
+// ✅ CORS setup (corrected)
 app.use(cors({
-  origin: 'https://faizcare.vercel.app/', // 👉 Change this to your frontend URL on Vercel after deploy
+  origin: 'https://faizcare.vercel.app', // no slash at the end
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -15,7 +15,7 @@ app.use(cors({
 // ✅ Body parser
 app.use(express.json());
 
-// ✅ Root route (to check server is live)
+// ✅ Root route
 app.get("/", (req, res) => {
   res.send("🟢 Backend is live!");
 });
