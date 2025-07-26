@@ -52,7 +52,7 @@ const AskQuestionMain = () => {
 
     setIsLoading(true);
     try {
-      const response = await fetch('http://https://faizcare.onrender.com//api/ai/ask', {
+      const response = await fetch('https://faizcare.onrender.com//api/ai/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question }),
