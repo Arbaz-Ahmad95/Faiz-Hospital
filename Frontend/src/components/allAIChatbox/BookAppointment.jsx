@@ -42,7 +42,7 @@ Details:
 Reply like: "Thank you, your appointment is booked."
 `;
 
-      const response = await fetch('https://faizcare.onrender.com//api/ai/ask', {
+      const response = await fetch('https://faizcare.onrender.com/api/ai/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ Reply like: "Thank you, your appointment is booked."
       </form>
 
       {answer && (
-        <p className="mt-4 text-sm text-green-600 font-medium">🤖 Your Appointment is booked </p>
+        <p className="mt-4 text-sm text-green-600 font-medium">🤖 {answer}</p>
       )}
     </div>
   );

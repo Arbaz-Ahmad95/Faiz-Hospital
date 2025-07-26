@@ -67,13 +67,12 @@ export default function SymptomChecker() {
 
     setIsLoading(true);
     try {
-      const res = await axios.post("https://faizcare.onrender.com//api/ai/symptom-check", {
+      const res = await axios.post("https://faizcare.onrender.com/api/ai/symptom-check", {
         age: formData.age,
         gender: formData.gender,
         symptoms: finalSymptoms.join(", "),
         duration: formData.duration,
         conditions: formData.conditions,
-        // medications removed from here
       });
       setResponse(res.data.answer);
     } catch (err) {
@@ -148,7 +147,7 @@ export default function SymptomChecker() {
           ))}
         </div>
 
-        {/* Show "Other" input */}
+        {/* Other symptom input */}
         {formData.symptoms.includes("Other") && (
           <input
             type="text"
