@@ -67,7 +67,7 @@ export default function SymptomChecker() {
 
     setIsLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/ai/symptom-check", {
+      const res = await axios.post("https://faizcare.onrender.com//api/ai/symptom-check", {
         age: formData.age,
         gender: formData.gender,
         symptoms: finalSymptoms.join(", "),
