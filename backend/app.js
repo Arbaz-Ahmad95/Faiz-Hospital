@@ -7,7 +7,7 @@ const app = express();
 
 // ✅ CORS setup (update this in production if needed)
 app.use(cors({
-  origin: 'http://https://faizcare.vercel.app/', // 👉 Change this to your frontend URL on Vercel after deploy
+  origin: 'https://faizcare.vercel.app/', // 👉 Change this to your frontend URL on Vercel after deploy
   methods: ['GET', 'POST'],
   credentials: true
 }));
