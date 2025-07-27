@@ -37,15 +37,17 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto my-10 border shadow-xl rounded-xl overflow-hidden bg-white">
-      <div className="bg-blue-600 text-white p-4 text-xl font-semibold">
-        🤖 Faiz Hospital Chat Assistant
+      <div className="w-full max-w-md mx-auto my-8 sm:my-10 border shadow-lg rounded-xl bg-white">
+      {/* Header */}
+      <div className="bg-blue-700 text-white text-center p-4 text-xl sm:text-2xl font-semibold rounded-t-xl">
+        🤖 Faiz Hospital Assistant
       </div>
 
-      <form onSubmit={handleSend} className="flex flex-col p-4 gap-3 border-t bg-white">
+      {/* Form */}
+      <form onSubmit={handleSend} className="flex flex-col gap-4 p-4">
         <input
           type="text"
-          className="border rounded-lg p-2 outline-none"
+          className="border border-gray-300 rounded-lg p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
           placeholder="Ask your question..."
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
@@ -53,15 +55,16 @@ const ChatBot = () => {
 
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg self-end"
+          className="bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base px-4 py-2 rounded-lg transition duration-200"
+          disabled={isLoading}
         >
           {isLoading ? 'Sending...' : 'Send'}
         </button>
 
         {answer && (
-          <div className="bg-gray-100 border rounded-lg p-3 text-sm text-gray-800">
-            <span className="font-semibold text-blue-600">Answer:</span><br />
-            {answer}
+          <div className="bg-gray-50 border rounded-lg p-3 text-sm sm:text-base text-gray-800">
+            <p className="font-medium text-blue-600 mb-1">Answer:</p>
+            <p>{answer}</p>
           </div>
         )}
       </form>

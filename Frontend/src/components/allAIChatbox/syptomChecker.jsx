@@ -82,30 +82,30 @@ export default function SymptomChecker() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-xl mt-6">
-      <h2 className="text-xl font-bold mb-4">🩺 Symptom Checker</h2>
+    <div className="max-w-lg w-full mx-auto p-4 sm:p-6 bg-white shadow-md rounded-xl mt-6">
+      <h2 className="text-2xl font-bold mb-4 text-blue-800">🩺 Symptom Checker</h2>
 
       {/* Age */}
-      <div className="mb-3">
-        <label className="block mb-1">Age *</label>
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">Age *</label>
         <input
           type="number"
           name="age"
           value={formData.age}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-sm"
           placeholder="Enter your age"
         />
       </div>
 
       {/* Gender */}
-      <div className="mb-3">
-        <label className="block mb-1">Gender *</label>
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">Gender *</label>
         <select
           name="gender"
           value={formData.gender}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-sm"
         >
           <option value="">Select gender</option>
           <option value="Male">Male</option>
@@ -114,13 +114,13 @@ export default function SymptomChecker() {
       </div>
 
       {/* Duration */}
-      <div className="mb-3">
-        <label className="block mb-1">Duration</label>
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">Duration</label>
         <select
           name="duration"
           value={formData.duration}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-sm"
         >
           <option value="">Select duration</option>
           {durationOptions.map((d) => (
@@ -130,24 +130,22 @@ export default function SymptomChecker() {
       </div>
 
       {/* Symptoms */}
-      <div className="mb-3">
-        <label className="block mb-1">Symptoms * (select 1–3)</label>
-        <div className="flex flex-wrap gap-2">
+      <div className="mb-4">
+        <label className="block mb-2 text-sm font-medium">Symptoms * (select 1–3)</label>
+        <div className="flex flex-wrap gap-3">
           {symptomOptions.map((symptom) => (
-            <label key={symptom} className="text-sm">
+            <label key={symptom} className="flex items-center text-sm gap-1">
               <input
                 type="checkbox"
                 value={symptom}
                 checked={formData.symptoms.includes(symptom)}
                 onChange={handleSymptomChange}
-                className="mr-1"
               />
               {symptom}
             </label>
           ))}
         </div>
 
-        {/* Other symptom input */}
         {formData.symptoms.includes("Other") && (
           <input
             type="text"
@@ -155,37 +153,37 @@ export default function SymptomChecker() {
             placeholder="Describe other symptom"
             value={formData.otherSymptom}
             onChange={handleChange}
-            className="w-full mt-2 p-2 border rounded"
+            className="w-full mt-2 p-2 border rounded text-sm"
           />
         )}
       </div>
 
       {/* Conditions */}
-      <div className="mb-3">
-        <label className="block mb-1">Existing Conditions</label>
+      <div className="mb-4">
+        <label className="block mb-1 text-sm font-medium">Existing Conditions</label>
         <input
           type="text"
           name="conditions"
           value={formData.conditions}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-sm"
           placeholder="Diabetes, BP, etc."
         />
       </div>
 
-      {/* Submit Button */}
+      {/* Submit */}
       <button
         onClick={handleSubmit}
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
+        className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded w-full hover:bg-blue-700 transition"
         disabled={isLoading}
       >
         {isLoading ? "Checking..." : "Check Symptoms"}
       </button>
 
-      {/* Result */}
+      {/* Response */}
       {response && (
-        <div className="mt-5 bg-gray-100 p-3 rounded border">
-          <p><strong>Gemini says:</strong></p>
+        <div className="mt-4 bg-gray-100 p-3 rounded border text-sm">
+          <p className="font-semibold text-gray-800">Gemini says:</p>
           <p>{response}</p>
         </div>
       )}

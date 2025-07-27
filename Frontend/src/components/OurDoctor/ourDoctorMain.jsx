@@ -1,40 +1,45 @@
 import React from "react";
-import saif2 from "../../assets/saif2.jpeg";
+
 import { Link } from 'react-router-dom';
+import doctor11 from "../../assets/doctor11.jpg";
+import doctor2 from "../../assets/doctor2.jpg";
+import doctor33 from "../../assets/doctor33.jpg";
+import doctor44 from "../../assets/doctor44.png";
+import doctor5 from "../../assets/doctor5.avif";
 
 const OurDoctorMain = () => {
   const doctors = [
     {
-      name: "Dr. Geetha P Shanbhag",
+      name: "Dr. Saif Ahmad",
       role: "Consultant Obstetrician & Gynaecologist",
-      experience: "50 Years of experience",
-      image: saif2,
+      experience: "21 Years of experience",
+      image: doctor11,
     },
     {
-      name: "Dr. Lata Anand",
+      name: "Dr. Khalid ",
       role: "Consultant Paediatrician",
-      experience: "37 Years of experience",
-      image: saif2,
+      experience: "14 Years of experience",
+      image: doctor2,
     },
     {
-      name: "Dr. Naresh Shetty",
+      name: "Dr. Aadil",
       role: "Consultant Orthopaedic Surgeon",
-      experience: "37 Years of experience",
-      image: saif2,
-    },
-
-    {
-      name: "Dr. Naresh Shetty",
-      role: "Consultant Orthopaedic Surgeon",
-      experience: "37 Years of experience",
-      image: saif2,
+      experience: "12 Years of experience",
+      image: doctor33,
     },
 
     {
-      name: "Dr. Naresh Shetty",
-      role: "Consultant Orthopaedic Surgeon",
-      experience: "37 Years of experience",
-      image: saif2,
+      name: "Dr. Priya Sharma",
+      role: " Consultant Dermatologist",
+      experience: "5 Years of experience",
+      image: doctor44,
+    },
+
+    {
+      name: "Dr. Rani Kumari",
+      role: " Consultant Obstetrician & Gynaecologist",
+      experience: "10 Years of experience",
+      image: doctor5,
     },
   ];
 

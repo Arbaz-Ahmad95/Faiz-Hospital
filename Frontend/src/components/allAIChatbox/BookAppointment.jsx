@@ -69,25 +69,27 @@ Reply like: "Thank you, your appointment is booked."
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 mt-8 bg-white shadow-md rounded-lg border border-gray-200">
-      <h2 className="text-xl font-semibold mb-4 text-center text-blue-700">Book Appointment 🏥</h2>
-      
+    <div className="w-full max-w-lg mx-auto p-4 sm:p-6 mt-10 bg-white shadow-lg rounded-xl border border-gray-200">
+      <h2 className="text-2xl font-bold text-center text-blue-700 mb-6">
+        🏥 Book Appointment
+      </h2>
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
           name="name"
-          placeholder="Patient Full Name"
+          placeholder="Patient Full Name *"
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         />
         <input
           type="tel"
           name="phone"
-          placeholder="Phone Number"
+          placeholder="Phone Number *"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         />
         <input
           type="email"
@@ -95,15 +97,15 @@ Reply like: "Thank you, your appointment is booked."
           placeholder="Email ID"
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         />
         <select
           name="department"
           value={formData.department}
           onChange={handleChange}
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         >
-          <option value="">Select Department</option>
+          <option value="">Select Department *</option>
           <option value="Cardiology">Cardiology</option>
           <option value="General">General</option>
           <option value="Dental">Dental</option>
@@ -113,26 +115,29 @@ Reply like: "Thank you, your appointment is booked."
           name="date"
           value={formData.date}
           onChange={handleChange}
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         />
         <textarea
           name="message"
-          placeholder="Your Message"
+          placeholder="Any Message (Optional)"
           value={formData.message}
           onChange={handleChange}
           rows="3"
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 border rounded-md bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         />
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-all"
+          className="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition-all duration-200"
         >
           {isLoading ? 'Booking...' : 'Book Appointment'}
         </button>
       </form>
 
       {answer && (
-        <p className="mt-4 text-sm text-green-600 font-medium">🤖 {answer}</p>
+        <div className="mt-5 bg-green-50 text-green-700 p-3 rounded-md border border-green-300">
+          <strong>🤖 Response:</strong><br />
+          {answer}
+        </div>
       )}
     </div>
   );

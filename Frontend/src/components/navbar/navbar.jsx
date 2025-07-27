@@ -60,6 +60,7 @@ const Navbar = ({scrollToBook}) => {
           </div>
 
           <nav className="flex flex-col space-y-4 text-black text-sm font-medium">
+             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/specialties">Specialties ⌄</Link>
             <Link to="/finddoctor">Find a Doctor</Link>

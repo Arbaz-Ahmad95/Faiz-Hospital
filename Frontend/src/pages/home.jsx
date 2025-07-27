@@ -32,7 +32,7 @@ function Home() {
       <AIBoxMain scrollToAsk={scrollToAsk} scrollToBook={scrollToBook} />
       <Header />
       <ImageBanner />
-      <FullSection />
+      <FullSection   scrollToBook={scrollToBook} />
       <OurDoctorMain />
       <CareNeedsMain />
       <PatientMain />
@@ -42,18 +42,23 @@ function Home() {
       </div>
       <CallBackMain />
       
-      <div className="text-center py-6" ref={appointment}>
-        <h2 className="text-3xl font-bold text-blue-800">Book Appointment & Symptom Checker</h2>
-        <p className="text-gray-600 mt-2">Choose your need and get started easily</p>
-      </div>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-6 px-4 py-10">
-        <div className="w-[400px]">
-          <BookAppointment />
-        </div>
-        <div className="w-[400px]">
-          <SymptomChecker />
-        </div>
-      </div>
+     <div className="text-center py-6 px-4" ref={appointment}>
+  <h2 className="text-2xl sm:text-3xl font-bold text-blue-800">
+    Book Appointment & Symptom Checker
+  </h2>
+  <p className="text-gray-600 mt-2 text-sm sm:text-base">
+    Choose your need and get started easily
+  </p>
+</div>
+
+<div className="flex flex-col lg:flex-row justify-center items-stretch gap-6 px-4 pb-10">
+  <div className="w-full max-w-md">
+    <BookAppointment />
+  </div>
+  <div className="w-full max-w-md">
+    <SymptomChecker />
+  </div>
+</div>
       <Footer />
     </>
   );
