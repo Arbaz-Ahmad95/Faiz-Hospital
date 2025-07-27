@@ -11,7 +11,7 @@ const OurDoctorMain = () => {
   const doctors = [
     {
       name: "Dr. Saif Ahmad",
-      role: "Consultant Obstetrician & Gynaecologist",
+      role: "Consultant General Surgeon",
       experience: "21 Years of experience",
       image: doctor11,
     },
